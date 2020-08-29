@@ -12,7 +12,7 @@ export class AppComponent  {
   midi: Midi;
 
   async getFile(event) {
-    this.midi = await this.readMidi(event.files[0]);
+    this.midi = await this.readMidi(event.target.files[0]);
     
   }
 

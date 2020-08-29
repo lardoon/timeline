@@ -16,25 +16,10 @@
     <section class="year" style="left: 659.44px">2019</section>
     <section class="year" style="left: 710.14px">2020</section>
     
-    <div class="event education" style="margin-left: 0">
+    <div class="event education" [ngStyle]="{'margin-left': i * 100}" *ngFor="let entry of entries;index as i">
       <div class="time" style="width: 274.44px"></div>
       <b>2006-03/2010</b><a href="http://www.ftn.kg.ac.rs/">Faculty of Technical Sciences</a> (Engineering Management)
     </div>
-    <div class="event" style="margin-left: 0px">
-      <div class="time" style="width: 280px"></div>
-      <b>2006-12/2011</b> Ultiva Records (Founder and CEO)
-    </div>
-    <div class="event" style="margin-left: 340px">
-      <div class="time" style="width: 50px"></div>
-      <b>03/2012-08/2013</b><a href="http://www.winwin.rs/">WinWin Shop</a> (Sales Executive)
-    </div>
-    <div class="event" style="margin-left: 390px">
-      <div class="time" style="width: 55px"></div>
-      <b>08/2013 - 11/2014</b><a href="http://www.winwin.rs/">WinWin Shop</a> (Marketing Manager)
-    </div>
-    <div class="event working" style="margin-left: 450px">
-      <div class="time" style="width: 70px"></div>
-      <b>02/2014 - </b><a href="http://www.winwin.rs/">WinWin Shop</a> (Front End Developer)
-    </div>
+    
   </div>
 </div>

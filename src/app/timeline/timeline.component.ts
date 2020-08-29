@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Track, Midi } from '@tonejs/midi';
 
 @Component({
   selector: 'app-timeline',
@@ -7,8 +8,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
+
+  private _midi: Midi;
+
   @Input()
-  entries: any[];
+  set midi(value: Midi) {
+    this._midi = value;
+  }
+
+  get midi() {
+    return this._midi;
+  }
+
+  get measures() : number {
+    return this._midi.header.ticksToMeasures(this._midi.durationTicks);
+  }
 
   constructor() { }
 

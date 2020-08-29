@@ -1,24 +1,10 @@
 <div id="timeline">
   <div id="life">
-    <section class="year" style="left: 0.00px">2006</section>
-    <section class="year" style="left: 50.69px">2007</section>
-    <section class="year" style="left: 101.39px">2008</section>
-    <section class="year" style="left: 152.22px">2009</section>
-    <section class="year" style="left: 202.92px">2010</section>
-    <section class="year" style="left: 253.61px">2011</section>
-    <section class="year" style="left: 304.31px">2012</section>
-    <section class="year" style="left: 355.14px">2013</section>
-    <section class="year" style="left: 405.83px">2014</section>
-    <section class="year" style="left: 456.53px">2015</section>
-    <section class="year" style="left: 507.22px">2016</section>
-    <section class="year" style="left: 558.06px">2017</section>
-    <section class="year" style="left: 608.75px">2018</section>
-    <section class="year" style="left: 659.44px">2019</section>
-    <section class="year" style="left: 710.14px">2020</section>
-    
-    <div class="event education" [ngStyle]="{'margin-left': i * 100}" *ngFor="let entry of entries;index as i">
-      <div class="time" [ngStyle]="{'width': entry.durationTicks / 10}"></div>
-      <b>{{entry.name}}</b>
+  <section class="year" [ngStyle]="{'left': (i * 50.69) + 'px'}" *ngFor="let i of [].constructor(measures); index as i">2006</section>
+        
+    <div class="event education" [ngStyle]="{'margin-left': 0}" *ngFor="let track of midi.tracks;index as i">
+      <div class="time" [ngStyle]="{'width': (track.durationTicks / 10) + 'px'}"></div>
+      <b>{{track.name}}</b>
     </div>
     
   </div>

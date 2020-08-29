@@ -1,2 +1,2 @@
 <input type="file" (change)="getFile($event)">
-<app-timeline *ngIf="midi" [entries]="midi.tracks"></app-timeline>
+<app-timeline *ngIf="midi" [midi]="midi"></app-timeline>

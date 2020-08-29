@@ -13,7 +13,7 @@ export class AppComponent  {
 
   async getFile(event) {
     this.midi = await this.readMidi(event.target.files[0]);
-    
+    console.log(this.midi.toJSON())
   }
 
    readMidi(file: Blob) : Promise<Midi> {

@@ -17,7 +17,7 @@
     <section class="year" style="left: 710.14px">2020</section>
     
     <div class="event education" [ngStyle]="{'margin-left': i * 100}" *ngFor="let entry of entries;index as i">
-      <div class="time" [ngStyle]="{'width': entry.duration}"></div>
+      <div class="time" [ngStyle]="{'width': entry.durationTicks / 10}"></div>
       <b>{{entry.name}}</b>
     </div>
     

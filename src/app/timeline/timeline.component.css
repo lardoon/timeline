@@ -29,7 +29,6 @@ body {
   padding-top: 10px;
   pointer-events: none;
   white-space: nowrap;
-  z-index: -1;
 }
 
 a {

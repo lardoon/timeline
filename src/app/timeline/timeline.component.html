@@ -1,6 +1,6 @@
 <div id="timeline">
   <div id="life">
-  <section class="year" [ngStyle]="{'left': (i * 50.69) + 'px'}" *ngFor="let i of [].constructor(measures); index as i">2006</section>
+  <section class="year" [ngStyle]="{'left': (i * 50.69) + 'px'}" *ngFor="let m of [].constructor(measures); index as j">2006</section>
         
     <div class="event education" [ngStyle]="{'margin-left': 0}" *ngFor="let track of midi.tracks;index as i">
       <div class="time" [ngStyle]="{'width': (track.durationTicks / 10) + 'px'}"></div>

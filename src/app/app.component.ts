@@ -17,13 +17,15 @@ export class AppComponent  {
   }
 
    readMidi(file: Blob) : Promise<Midi> {
-    let reader = new FileReader();
+    
     return new Promise((resolve, reject) => {
+      let reader = new FileReader();
       reader.onload = (ev) => {
         resolve(new Midi(<ArrayBuffer> ev.target.result));
       }
       reader.onerror = reject;
+      reader.readAsArrayBuffer(file);
     });
-    reader.readAsArrayBuffer(file);
+    
   }
 }

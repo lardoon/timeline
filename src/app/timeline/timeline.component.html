@@ -17,8 +17,8 @@
     <section class="year" style="left: 710.14px">2020</section>
     
     <div class="event education" [ngStyle]="{'margin-left': i * 100}" *ngFor="let entry of entries;index as i">
-      <div class="time" style="width: 274.44px"></div>
-      <b>2006-03/2010</b><a href="http://www.ftn.kg.ac.rs/">Faculty of Technical Sciences</a> (Engineering Management)
+      <div class="time" [ngStyle]="{'width': entry.duration}"></div>
+      <b>{{entry.name}}</b>
     </div>
     
   </div>

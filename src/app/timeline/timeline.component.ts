@@ -8,6 +8,7 @@ import { Track, Midi } from '@tonejs/midi';
 })
 export class TimelineComponent implements OnInit {
 
+  measureWidth: number = 30;
 
   private _midi: Midi;
 

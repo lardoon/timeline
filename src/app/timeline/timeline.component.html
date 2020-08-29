@@ -1,10 +1,10 @@
 <div id="timeline">
   <div id="life">
-  <section class="year" [ngStyle]="{'left': (j * 50.69) + 'px'}" *ngFor="let m of [].constructor(measures); index as j">{{j+1}}</section>
+  <section class="year" [ngStyle]="{'left': (j * measureWidth) + 'px'}" *ngFor="let m of [].constructor(measures); index as j">{{j+1}}</section>
         
     <div class="event education" [ngStyle]="{'margin-left': 0}" *ngFor="let track of midi.tracks;index as i">
-      <div class="time" [ngStyle]="{'width': (getTrackMeasures(track)* 50.69) + 'px'}"></div>
-      <b>{{track.name}}</b>
+      <div class="time" [ngStyle]="{'width': (getTrackMeasures(track) * measureWidth) + 'px'}"></div>
+      <b>{{track.name || 'Track ' + (i + 1)}}</b>
     </div>
     
   </div>

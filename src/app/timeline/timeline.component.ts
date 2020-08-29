@@ -21,7 +21,11 @@ export class TimelineComponent implements OnInit {
   }
 
   get measures() : number {
-    return this._midi.header.ticksToMeasures(this._midi.durationTicks);
+    return Math.floor(this._midi.header.ticksToMeasures(this._midi.durationTicks));
+  }
+
+  getTrackMeasures(track: Track) : number {
+    return Math.floor(this._midi.header.ticksToMeasures(track.durationTicks));
   }
 
   constructor() { }

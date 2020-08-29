@@ -3,7 +3,7 @@
   <section class="year" [ngStyle]="{'left': (j * 50.69) + 'px'}" *ngFor="let m of [].constructor(measures); index as j">{{j+1}}</section>
         
     <div class="event education" [ngStyle]="{'margin-left': 0}" *ngFor="let track of midi.tracks;index as i">
-      <div class="time" [ngStyle]="{'width': (track.durationTicks / 10) + 'px'}"></div>
+      <div class="time" [ngStyle]="{'width': (getTrackMeasures(track)* 50.69) + 'px'}"></div>
       <b>{{track.name}}</b>
     </div>
     
